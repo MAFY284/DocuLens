@@ -128,15 +128,20 @@ También puedes abrir la carpeta directamente en Android Studio y ejecutar la co
 
 ## Generar APK release firmado
 
-El proyecto incluye un keystore de ejemplo **solo para esta entrega** en `keystore/doculens-release.jks` y el archivo `keystore.properties` (ambos están en `.gitignore`).
+El APK publicado en GitHub Releases ya está firmado y listo para instalar. El keystore y `keystore.properties` **no se publican** en el repositorio.
 
-Credenciales del keystore de ejemplo:
+Para compilar tu propio release firmado, crea un keystore y un archivo `keystore.properties` en la raíz:
 
+```bash
+keytool -genkeypair -v -keystore keystore/mi-release.jks \
+  -alias mialias -keyalg RSA -keysize 2048 -validity 10000
 ```
-storeFile=keystore/doculens-release.jks
-storePassword=doculens2026
-keyAlias=doculens
-keyPassword=doculens2026
+
+```properties
+storeFile=keystore/mi-release.jks
+storePassword=TU_CONTRASEÑA
+keyAlias=mialias
+keyPassword=TU_CONTRASEÑA
 ```
 
 Compilar:
@@ -158,14 +163,7 @@ $ANDROID_HOME/build-tools/35.0.0/apksigner verify --print-certs \
   app/build/outputs/apk/release/app-release.apk
 ```
 
-Para una publicación real, genera tu propio keystore y guarda las contraseñas de forma segura:
-
-```bash
-keytool -genkeypair -v -keystore keystore/mi-release.jks \
-  -alias mialias -keyalg RSA -keysize 2048 -validity 10000
-```
-
-Actualiza `keystore.properties` con esos valores y vuelve a compilar.
+Guarda el keystore y las contraseñas de forma segura. Nunca subas `keystore.properties` ni el archivo `.jks` al repositorio.
 
 ## Instalar
 
