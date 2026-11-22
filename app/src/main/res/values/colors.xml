@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="splash_background">#F7F8FC</color>
+    <color name="brand_primary">#2F5BFF</color>
+    <color name="brand_icon_background">#E9EEFF</color>
+</resources>
