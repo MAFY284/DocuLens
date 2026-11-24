@@ -2,9 +2,9 @@
 
 Aplicación Android nativa para escanear documentos, mejorarlos y generar PDF multipágina. Está construida desde cero con **Kotlin + Jetpack Compose + Material 3**, funciona principalmente **offline**, no incluye anuncios ni rastreo y guarda todo en el almacenamiento del dispositivo.
 
-**Descargar APK:** [GitHub Releases](https://github.com/MAFY284/DocuLens/releases/latest) · [`DocuLens-1.0.0-release.apk`](DocuLens-1.0.0-release.apk) (también en `app/build/outputs/apk/release/app-release.apk`).
+**Descargar APK:** [GitHub Releases](https://github.com/MAFY284/DocuLens/releases/latest) — `DocuLens-1.0.1-release.apk` firmado.
 
-SHA-256 del APK: `5775795d3aa0532728cca558435d929d828e6effd3bda04f939984e9685d478f`
+SHA-256 del APK: `6dc1315152926e85578a220fe6c84e91369b23c808ee871660c37571a44db6a1`
 
 ![Inicio](screenshots/home.png)
 ![Cámara](screenshots/scanner.png)
@@ -14,8 +14,8 @@ SHA-256 del APK: `5775795d3aa0532728cca558435d929d828e6effd3bda04f939984e9685d47
 ## Características
 
 ### Captura
-- Cámara CameraX a pantalla completa con marco de captura ajustable (4 esquinas arrastrables).
-- Recorte exacto al marco y corrección de perspectiva al capturar con el modo Rápida.
+- Cámara CameraX con vista previa del encuadre completo y marco de captura ajustable (4 esquinas arrastrables).
+- Recorte exacto al marco y corrección de perspectiva al capturar con el modo Rápida; el marco visible coincide con el área recortada.
 - **ML Kit Document Scanner** para detección de bordes, recorte y corrección de perspectiva automática de alta calidad.
 - Modo **Rápida** (CameraX + marco manual) y modo **Precisión** (ML Kit).
 - Importación desde galería con auto-recorte heurístico y corrección EXIF.
